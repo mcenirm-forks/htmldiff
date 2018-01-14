@@ -4,7 +4,7 @@
 .. moduleauthor:: Ian Bicking, Brant Watson <brant.watson@propylon.com>
 """
 # Standard Imports
-import HTMLParser
+from six.moves import html_parser
 import logging
 from copy import copy
 from difflib import SequenceMatcher
@@ -115,7 +115,7 @@ class TagIter(object):
         return self.__next__()
 
 
-class TagStrip(HTMLParser.HTMLParser):
+class TagStrip(html_parser.HTMLParser):
     """
     Subclass of HTMLParser used to strip html tags from strings
     """
