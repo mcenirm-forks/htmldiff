@@ -7,7 +7,7 @@ class SixTest(unittest.TestCase):
         pass
 
     def test_six_import(self):
-        pass
+        from htmldiff.lib import diff_files
 
 
 if __name__ == '__main__':
